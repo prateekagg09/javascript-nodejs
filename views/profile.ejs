@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: aqua; 
+                font-family: Arial, Helvetica, sans-serif;
+                color: #fff;
+                padding: 30px;
+            }
+h1 {font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
+h2  {font-size: 28px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
+p, li{font-size: 16px; text-align: center;}
+              </style>
+    </head> 
+    <body>
+        <% include partials/nav.ejs %> 
+            <h1>THIS IS THE BEST WEBSITE BY <%=person %></h1>
+            <p><strong>Age: </strong><%= data.age %> </p>
+        <p><strong>Job: </strong> <%= data.job %> </p>
+        <h2> Hobbies</h2>
+        <ul>
+            <% data.hobbies.forEach(function(item){ %>
+           <li> <%= item %></li>
+
+           <% }) %>
+        </ul>
+    </body>
+
+</html>
